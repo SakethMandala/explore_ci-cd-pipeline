@@ -39,10 +39,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up .NET Core
-        uses: actions/setup-dotnet@v2
+      - name: Setup dotnet on runner
+        uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
+          dotnet-version: '3.x'
 
       - name: Set up dependency caching for faster builds
         uses: actions/cache@v3
